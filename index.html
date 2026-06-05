@@ -22,6 +22,55 @@ header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(11,15,25,.85
 .menu{display:flex;gap:25px;list-style:none}
 .menu a{text-decoration:none;color:var(--muted)}
 .menu a:hover{color:white}
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    width:100%;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:380px;
+    height:380px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid var(--accent);
+    box-shadow:0 0 30px rgba(59,130,246,.4);
+}
+
+@media(max-width:768px){
+
+    .hero-content{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .btns{
+        justify-content:center;
+    }
+
+    .hero-image img{
+        width:280px;
+        height:280px;
+    }
+}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center}
 .hero-sub{color:var(--accent);font-weight:700}
 .hero-title{font-size:4rem;font-weight:800;margin:15px 0}
@@ -73,17 +122,34 @@ footer{text-align:center;padding:30px;border-top:1px solid var(--border);color:v
 </div>
 </header>
 
-<section id="home" class="hero">
-<p class="hero-sub">HELLO, I'M</p>
-<h1 class="hero-title">Rudra Narayan Deo</h1>
-<div class="hero-typing"><span id="typing"></span>|</div>
-<p class="hero-desc">
-Aspiring Full Stack Developer currently studying at PW Skills, passionate about building responsive websites, modern web applications and solving real-world problems through technology.
-</p>
-<div class="btns">
-<a href="#projects" class="btn primary">View Projects</a>
-<a href="#contact" class="btn secondary">Contact Me</a>
-</div>
+<<section id="home" class="hero">
+    <div class="hero-content">
+
+        <div class="hero-text">
+            <p class="hero-sub">HELLO, I'M</p>
+            <h1 class="hero-title">Rudra Narayan Deo</h1>
+
+            <div class="hero-typing">
+                <span id="typing"></span>|
+            </div>
+
+            <p class="hero-desc">
+                Aspiring Full Stack Developer currently studying at PW Skills,
+                passionate about building responsive websites, modern web applications
+                and solving real-world problems through technology.
+            </p>
+
+            <div class="btns">
+                <a href="#projects" class="btn primary">View Projects</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="rudra.png" alt="Rudra Narayan Deo">
+        </div>
+
+    </div>
 </section>
 
 <section id="about">
